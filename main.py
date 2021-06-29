@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
-import test.t as t
+import data 
 
 my_workbook = None
 
@@ -24,12 +24,12 @@ def select_path():
 def statistical_chart():
     if path.get() != "":
         data_list = my_workbook.get_statistical_chart_data()
-        t.draw_init()
-        t.draw_one(data_list[0])
-        t.draw_two(data_list[1])
-        t.draw_three(data_list[2])
-        t.draw_four(data_list[3])
-        t.draw_show()
+        data.draw_init()
+        data.draw_one(data_list[0])
+        data.draw_two(data_list[1])
+        data.draw_three(data_list[2])
+        data.draw_four(data_list[3])
+        data.draw_show()
         label2_text.set("文件处理完成")
     else:
         label2_text.set("未选择Excel文件")
